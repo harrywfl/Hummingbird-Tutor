@@ -52,6 +52,6 @@
 申请处理页面
 
 <div align="center">
-<img src="http://bmob-cdn-16714.b0.upaiyun.com/2018/02/20/1b31aa69408248fa803e1648d55e72e0.png" height="500" width="270" >
+<img src="http://bmob-cdn-16714.b0.upaiyun.com/2018/02/20/1b31aa69408248fa803e1648d55e72e0.png" height="2000" width="270" >
 </div>
 教师信息完善（注册）页面
