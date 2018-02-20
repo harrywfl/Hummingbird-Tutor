@@ -1,0 +1,163 @@
+<view class="page">
+
+          <view class="chose">
+              <view class="become-teacher" >我是老师</view>
+              <view class="find-teacher"  bindtap="jumpStudent">我是家长</view>
+          </view>
+
+      <form bindsubmit="registerSuccess" report-submit="true">        
+          <view class="column-photo" >
+              <view class="tip-photo">您的照片</view>
+              <image class="photo"  src="{{photo}}"  bindtap="uploadPhoto"/>
+
+             <image class="rightArrowPhoto"  wx:if="{{inputName==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrowPhoto"  wx:elif="{{inputName==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+          <view class="tip-photo">基本信息</view>
+
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/name.png'></image>
+              <view class="tip">您的姓氏：</view>
+              <view class="inputColumn">
+                      <input value="{{inputText}}"   name="teacherName" maxlength="3"  bindblur="teacherInput" placeholder="为保护教师隐私，仅输入姓氏即可"  placeholder-style="color:#969696;  font-size: 25rpx;" />
+              </view>
+              <image class="rightArrow"  wx:if="{{inputName==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputName==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+            <view class="column">
+              <image class='registerIcon' src='../../registerIcon/telephone.png'></image>
+              <view class="tip">您的电话：</view>
+              <view class="inputColumn" >
+                      <input  type="number" bindblur="inputTelephoneRight"   placeholder="用于家长及时和您沟通" name="telephone"  placeholder-style="color:#969696"   />
+              </view>
+              <image class="rightArrow"  wx:if="{{inputTelephone==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputTelephone==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/sex.png'></image>
+              <view class="tip">您的性别：</view>
+              <view class="inputColumn">
+                  <picker bindchange="sexChange"  name="sex" value="{{sexIndex}}" range="{{sexArray}}">
+                          <view class="picker"><text class="grey">{{sex}}</text></view>
+                  </picker>
+              </view>
+              <image class="rightArrow" src="../../image/rightArrow.png"></image>
+              <image class="rightArrow"  wx:if="{{inputSex==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputSex==false}}" src="../../image/inputError.png"></image>
+
+
+          </view>
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/university.png'></image>
+              <view class="tip">教育经历：</view>
+              <view class="inputColumn">
+                  <picker bindchange="universityChange"  name="university"  value="{{universityIndex}}" range="{{universityArray}}">
+                          <view class="picker"><text class="grey">{{university}}</text></view>
+                  </picker>
+              </view>
+              <image class="rightArrow" src="../../image/rightArrow.png"></image>
+              <image class="rightArrow"  wx:if="{{inputUniversity==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputUniversity==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/degree.png'></image>
+              <view class="tip">您的学历：</view>
+              <view class="inputColumn">
+                  <picker bindchange="degreeChange"  name="degree" value="{{degreeIndex}}" range="{{degreeArray}}">
+                          <view class="picker"><text class="grey">{{degree}}</text></view>
+                  </picker>
+              </view>
+              <image class="rightArrow" src="../../image/rightArrow.png"></image>
+              <image class="rightArrow"  wx:if="{{inputDegree==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputDegree==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/major.png'></image>
+              <view class="tip">您的专业：</view>
+              <view class="inputColumn">
+                      <input  placeholder="本科或研究生专业" bindblur="inputMajorRight"  name="major" placeholder-style="color:#969696" />
+              </view>
+              <image class="rightArrow"  wx:if="{{inputMajor==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputMajor==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/score.png'></image>
+              <view class="tip">高考分数：</view>
+              <view class="inputColumn">
+                      <input  type="number" placeholder="请填写您的高考分数" bindblur="inputScoreRight"  name="teacherScore"  placeholder-style="color:#969696" />
+              </view>
+              <image class="rightArrow"  wx:if="{{inputScore==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputScore==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+
+          <view class="column">
+              <image class='registerIcon' src='../../registerIcon/salary.png'></image>
+              <view class="tip">期望薪资：</view>
+              <view class="inputColumn">
+                      <input placeholder="如“XX元1小时”" bindblur="inputSalaryRight"  name="salary" placeholder-style="color:#969696" />
+              </view>
+              <image class="rightArrow"  wx:if="{{inputSalary==true}}" src="../../image/inputRight.png"></image>
+              <image class="rightArrow"  wx:elif="{{inputSalary==false}}" src="../../image/inputError.png"></image>
+
+          </view>
+
+          <view class="tip-photo" style='margin:40rpx 0rpx 40rpx 0rpx;'>教学科目</view>
+          <view class="course-check" style=" padding-bottom:20rpx;">
+                <view class="courseItem" wx:for="{{courseList}}"  data-index="{{index}}" bindtap="choseCourse" style="{{item.chose=='true'?'background-color: #fe4c40;border: 1rpx solid #fe4c40; color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+                  <view style="width: {{2*image_width}}rpx;padding-top:15rpx;padding-bottom:15rpx;">{{item.name}}</view>
+                </view>
+          </view>
+
+          <view class="tip-photo" style='margin:40rpx 0rpx 40rpx 0rpx;'>教学特点</view>
+          <view class="course-check" style=" padding-bottom:20rpx;">
+                <view class="courseItem" wx:for="{{traitList}}"  data-index="{{index}}" bindtap="choseTrait" style="{{item.chose=='true'?'background-color: #fe4c40;border: 1rpx solid #fe4c40; color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+                  <view style="padding:15rpx;">{{item.name}}</view>
+                </view>
+          </view>
+
+          
+          <view class="tip-photo" style='margin:40rpx 0rpx 40rpx 0rpx;'>其他备注</view>
+
+         <view class="column" style="position:relative;height:300rpx;  border-radius:0rpx;border: 1rpx dashed  #fe4c40;">
+            <view class="inputRemark" style="position:absolute; top:15rpx;padding-top:30rpx;">
+                        <textarea  maxlength="500"  name="remark" placeholder="请填写对老师更为详细的要求，以及您孩子的学习情况，和补习时间等"  placeholder-style="color:#969696" />
+                    </view>
+        </view>
+
+        
+
+
+          <view class="tip-photo" style='margin:40rpx 0rpx 40rpx 0rpx;'>相关证书</view>
+          <view class="gallery">
+            <view class="item" wx:for="{{urlArr}}" >
+                  <image class="thumb" data-current="{{item}}"  style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx" src="{{item.url}}"  bindtap="previewImage"/>
+                  <image class="delete" src="../../image/deleteImage.png" data-index="{{index}}" bindtap="delete"></image>
+            </view>
+                  <image class="thumb" style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx" src="../../image/upload.png"  bindtap="upImg"/>
+          </view>
+          
+          <button  class="submitButton"  formType="submit">提交</button >
+
+      </form>
+        
+</view>
+
+    

@@ -1,0 +1,217 @@
+page{
+     height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.teacher-list{
+  display:inline;
+  padding-top: 40rpx;
+}
+
+.student-sketch{
+  display: flex;
+  height: 230rpx;
+  border-bottom: 10rpx solid #eee;
+}
+
+ .course-circular {
+     display: flex;
+     width: 140rpx;
+     height: 140rpx;
+     margin: 50rpx 30rpx 20rpx;
+     border-radius:100rpx;
+ }
+
+ .course-circular text{
+   color:#fff;
+   font-size: 42rpx;
+   margin: 45rpx 0 0 32rpx;
+ }
+
+ .math{
+  background: #fa88fc;
+}
+.english{
+  background:#87ff3d;
+}
+.chinese{
+  background:#8061fa;
+}
+.physics{
+  background:#ff7880;
+}
+.chemistry{
+  background:#f5e347;
+}
+.biology{
+  background:#56cbdb;
+}
+.politics{
+  background:#f2b94b;
+}
+.history{
+  background:#4bf298;
+}
+.geography{
+  background:#49fc5b;
+}
+.art{
+  background:#8a62cc;
+}
+.piano{
+  background:#a0f238;
+}
+.Japanese{
+  background:#c361ff;
+}
+.korean{
+  background:#637cff;
+}
+
+
+
+.teacher-name{
+    font-size: 42rpx;
+}
+
+.name-salary{
+    display: block;
+    margin-top: 55rpx;
+}
+
+.student-info{
+  padding: 0rpx 0rpx 20rpx 20rpx;
+  border-bottom: 10rpx solid #eee;
+}
+
+
+.teach-salary{
+  color: #fe4c40;
+  margin-top: 40rpx;
+}
+
+.grade,.basic,.teach-time,.teacher-sex,.degree{
+  display: flex;
+  padding-top: 20rpx;
+}
+
+
+.gray-text{
+  color: #737373;
+}
+
+.teacher-requirement{
+
+  padding: 0rpx 0rpx 20rpx 20rpx;
+  border-bottom: 10rpx solid #eee;
+}
+
+.address{
+    background-color: #fff;
+  margin-top: 15rpx;
+  padding: 0rpx 0rpx 20rpx 20rpx;
+    position: relative;
+    align-items:center;
+  display: flex;
+    border-bottom: 10rpx solid #eee;
+}
+
+.mapIcon{
+  width: 80rpx;
+  height: 90rpx;
+}
+
+
+
+
+.remark-title{
+  display: flex;
+  padding: 20rpx 30rpx 20rpx;
+  color:#fe4c40;
+  
+}
+
+.remark-int{
+  display: flex;
+  padding: 0rpx 30rpx 50rpx;
+}
+
+
+.tip{
+  width: 100%;
+  font-size: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 150rpx;
+  background:#efefef;
+  text-align: center;
+  color:#fe4c40;
+}
+
+.bottom{
+  z-index: 99;
+  position:fixed;
+  bottom:0;
+  text-align: center;
+  width: 100%;
+  height:100rpx;
+  background: #fff;
+
+}
+
+.operation-left,.operation-right{
+    width:50%;
+    height:100%;
+    display: flex;
+
+}
+
+.modify-icon{
+  height:50rpx;
+  width: 50rpx;
+  margin:auto;
+}
+
+.delete-icon{
+   height:47rpx;
+   width: 47rpx;
+   margin:auto;
+}
+
+.operation-left{
+  float: left;
+  background-color:#fff;
+}
+
+.operation-right{
+  float: right;
+  background-color:#fff;
+}
+
+.operation{
+  width: 40%;
+  height: 80%;
+}
+
+.operation-right text,.operation,.operation-text{
+  margin: auto;
+  display: flex;
+}
+
+
+.tip{
+  width: 100%;
+  font-size: 30rpx;
+
+  background:#efefef;
+  text-align: center;
+  color:#fe4c40;
+}
+
+
+
+

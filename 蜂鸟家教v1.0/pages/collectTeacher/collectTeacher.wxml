@@ -1,0 +1,26 @@
+<view class="page">
+
+<view wx:if="{{judgeCollect==true}}" wx:for="{{collect_list}}" class="row" wx:key="" bindtap="showDetail" data-index="{{index}}">
+        <view class="collect-teacher">
+            <view class="left">
+                <image class="teacherPhoto" src="{{item.photo}}" />
+                <text>{{item.teacher_name}}</text>
+            </view>
+            <view class="right">
+              <image class="delete" data-index="{{index}}"  catchtap="deleteCollect"   src="../../image/delete.png" />
+                <view class="teacher-university">{{item.university}}</view>
+                <view class="teach-course">
+                        <text wx:for="{{item.teach_course}}">{{item}}</text>
+                </view>
+            </view>
+        </view>
+  </view>
+
+
+  <view class="noCollect" wx:if="{{judgeCollect==false}}" >
+      <view>您还没有收藏教师</view>
+        <view>快去找几个合适的教师吧~</view>
+  </view>
+
+
+</view>

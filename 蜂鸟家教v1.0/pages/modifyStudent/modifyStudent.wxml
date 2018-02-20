@@ -1,0 +1,112 @@
+<view class="page">
+   
+
+        <form bindsubmit="registerSuccess" report-submit="true">
+               
+    
+
+
+                <view class="column">
+                    <view class="tip">补习科目：</view>
+                    <view class="inputColumn">
+                        <picker   bindchange="courseChange"   name="course" value="{{courseIndex}}" range="{{courseArray}}">
+                            <view class="picker"><text class="grey">{{courseArray[courseIndex]}}</text></view>
+                        </picker>
+                    </view>
+                    <image class="rightArrow" src="../../image/rightArrow.png"></image>
+
+                </view>
+
+                <view class="column">
+                    <view class="tip">学生年级：</view>
+                    <view class="inputColumn">
+                        <picker mode="multiSelector"  name="grade"  bindchange="gradeChange" bindcolumnchange="gradeColumnChange" value="{{gradeIndex}}" range="{{gradeArray}}">
+                            <view class="gradePicker">
+                              <text class="grey">{{gradeArray[0][gradeIndex[0]]}}  {{gradeArray[1][gradeIndex[1]]}}</text>
+                            </view>
+                        </picker>
+                    </view>
+                    <image class="rightArrow" src="../../image/rightArrow.png"></image>
+                </view>
+
+                <view class="column">
+                    <view class="tip">学生基础：</view>
+                    <view class="inputColumn">
+                        <picker bindchange="basciChange"   name="basic" value="{{basicIndex}}" range="{{basicArray}}">
+                            <view class="picker"><text class="grey">{{basicArray[basicIndex]}}</text></view>
+                        </picker>
+                    </view>
+                    <image class="rightArrow" src="../../image/rightArrow.png"></image>
+                </view>
+
+
+                <view class="column">
+                    <view class="tip">教师资质：</view>
+                    <view class="inputColumn">
+                        <picker bindchange="traitChange"  name="trait"  value="{{traitIndex}}" range="{{traitArray}}">
+                            <view class="picker"><text class="grey">{{traitArray[traitIndex]}}</text></view>
+                        </picker>
+                    </view>
+                    <image class="rightArrow" src="../../image/rightArrow.png"></image>
+                </view>
+
+                <view class="column">
+                    <view class="tip">教师性别：</view>
+                    <view class="inputColumn">
+                        <picker bindchange="sexChange"  name="sex"  value="{{sexIndex}}" range="{{sexArray}}">
+                            <view class="picker"><text class="grey">{{sexArray[sexIndex]}}</text></view>
+                        </picker>
+                    </view>
+                    <image class="rightArrow" src="../../image/rightArrow.png"></image>
+                </view>
+
+      
+                
+                <view class="column">
+                    <view class="tip">补习次数：</view>
+                    <view class="inputColumn">
+                        <picker bindchange="frequencyChange"  name="frequency"  value="{{frequencyIndex}}" range="{{frequencyArray}}">
+                            <view class="picker"><text class="grey">{{frequencyArray[frequencyIndex]}}</text></view>
+                        </picker>
+                    </view>
+                    <image class="rightArrow" src="../../image/rightArrow.png"></image>
+                </view>
+
+                 <view class="column">
+                    <view class="tip" style=" margin: 0rpx 85rpx 0rpx 30rpx;">课时费：  </view>
+                    <view class="inputColumn">
+                        <input  placeholder="如“XX元1小时”"  value="{{student.salary}}" name="salary" placeholder-style="color:#545454" />
+                    </view>
+                 </view>
+
+                  <view class="column">
+                      <view class="tip">您的电话：</view>
+                      <view class="inputColumn" >
+                          <input  type="number"  value="{{student.telephone}}" placeholder="用于教师及时和您沟通" name="telephone"  placeholder-style="color:#545454"   />
+                      </view>
+                  </view>
+
+
+                   <view class="column" style="border-bottom:0;">
+                    <text class="tip" style="margin-bottom:0rpx;">上课地点：</text>
+                     <text class="grey" style="margin-right:20rpx;" bindtap="getAddress">点击获取地理位置  </text>
+                     <image class="mapIcon" src="../../image/map.png"></image>
+                     <image class="rightArrow"  wx:if="{{inputAddress==true}}" src="../../image/inputRight.png"></image>
+                    <image class="rightArrow"  wx:elif="{{inputAddress==false}}" src="../../image/inputError.png"></image>
+                 </view>
+                    <view class="grey" style="margin:0rpx 0rpx 0rpx 30rpx;">{{addressName}}</view>
+                    <view class="grey"  style="padding:20rpx 0rpx 0rpx 30rpx;padding-bottom:20rpx;border-bottom:20rpx solid #eee" >{{addressDetail}}</view>
+
+     
+                         <view class="column" style="position:relative;height:300rpx;">
+                    <text class="tip" style="position:absolute; top:10rpx;padding-top:30rpx;">其他备注：</text>
+                    <view class="inputRemark" style="position:absolute; top:15rpx;margin-left:250rpx;padding-top:30rpx;">
+                        <textarea  value="{{student.remark}}"   maxlength="500"  name="remark" placeholder="请填写对老师更为详细的要求，以及您孩子的学习情况，和补习时间等"  placeholder-style="color:#545454" />
+                    </view>
+                </view>
+
+                <button  class="submitButton"  formType="submit">提交</button >
+                
+        </form>
+  
+</view>

@@ -1,0 +1,95 @@
+<view class="page">
+      
+ 
+        <!--教师照片、名字、课程-->
+        <view class="teacher-sketch">
+          <image class="teacherPhoto" bindtap="preview"src="{{teacher.photo}}" />
+          <view class="name-course">
+              <view class="teacher-name">{{teacher.teacher_name}}</view>
+              <view class="teach-course">
+                     <text>教授课程：</text><text class="courseMargin" wx:for="{{teacher.teach_course}}">{{item}}</text>
+              </view>
+          </view>
+        </view>
+
+         <view class="aboutData">
+            <image class="timeIcon" src="../../image/time.png"></image>
+            <view class="timeText">{{teacher.modifyTime}}</view>
+
+            <image class="collectIcon" src="../../image/collectNumber.png"></image>
+            <view class="collectText">{{collectNumber}}</view>
+
+            <image class="applyIcon" src="../../image/applyNumber.png"></image>
+            <view class="applyText">{{applyNumber}}</view>
+        </view>
+
+        <!--薪资、教学范围-->
+        <view class="teachRange-salary">
+            <view class="salary">
+                <text class="gray-text">期望薪资 :</text> <text style="padding-left:10rpx;">{{teacher.salary}}</text>
+            </view>
+
+            <view class="teachRange">
+                <text class="gray-text">教学范围 :</text> <text style="padding-left:10rpx;">小学一年级 至 初中三年级</text>
+            </view>
+        </view>
+
+        <!--教师简介-->
+        <view class="teacher-info">
+            <view class="teacher-university">
+                <text class="gray-text">教育经历 :</text> <text style="padding-left:10rpx;">{{teacher.university}}</text>
+            </view>
+
+            <view class="teacher-score">
+                <text class="gray-text">高考分数 :</text> <text style="padding-left:10rpx;">{{teacher.teacher_score}}</text>
+            </view>
+
+            <view class="degree">
+                <text class="gray-text">学历 :</text> <text style="padding-left:10rpx;">{{teacher.degree}}</text>
+            </view>
+
+            <view class="major">
+                <text class="gray-text">专业 :</text> <text style="padding-left:10rpx;">{{teacher.major}}</text>
+            </view>
+        </view>
+
+        <!--自我介绍-->
+        <view class="self-introduction">
+            <text class="self-title">自我介绍:</text>
+            <text class="self-int">{{teacher.self_int}}</text>
+        </view>
+
+        <view class="gallery">
+         <view class="itemImage" wx:for="{{imageArr}}" >
+              <image class="thumb" data-current="{{item}}"  style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx" src="{{item}}" bindtap="previewImage"/>
+          </view>
+        </view>
+        <view  class="tip"></view>
+
+
+
+      <view class="bottom">
+          <view class="operation-left" bindtap="deleteRelease">
+                  <view class="operation"> 
+                        <image class="delete-icon"   src="../../image/deleteRelease.png"></image>
+                        <text class="operation-text">删除</text>
+                  </view>
+          </view>
+          <view class="operation-right"  bindtap="modifyRelease">
+                      <view class="operation"> 
+                        <image class="modify-icon"   src="../../image/modify.png"></image>
+                        <text class="operation-text">修改</text>
+                  </view>
+          </view>
+      </view>
+    
+     
+
+
+</view>
+
+
+
+
+
+

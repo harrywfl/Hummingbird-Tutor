@@ -1,0 +1,162 @@
+
+ page{
+   height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #fff;
+   
+}
+
+.chose{
+    margin: 50rpx 0rpx 30rpx 0rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.find-teacher,.become-teacher {
+    padding-top: 28rpx;
+    text-align: center;
+    width: 140px;
+    height: 38px;
+    display: inline-block;
+    margin:20rpx;
+    color: #fff;
+    font-size: 40rpx;
+}
+
+.find-teacher{
+    background: #fe4c40;
+}
+
+
+.become-teacher{
+    background: #c4c4c4;
+}
+
+.column{
+  position: relative;
+    align-items:center;
+  display: flex;
+  margin: 40rpx 0rpx 0rpx 2.5%;
+  width: 95%;
+  padding: 15rpx 0rpx 15rpx 0rpx;
+  border: 1rpx solid #fe4c40;
+  border-radius: 50rpx;
+}
+
+.addressColumn{
+  position: relative;
+    align-items:center;
+  display: flex;
+  margin: 40rpx 15rpx 0rpx 15rpx;
+  padding: 15rpx 0rpx 15rpx 0rpx;
+}
+
+.registerIcon{
+  height: 50rpx;
+  width: 50rpx;
+  margin: 0rpx 10rpx 0rpx 20rpx;
+}
+
+.tip-photo{
+  height: 50rpx;
+  width: 150rpx;
+  background-color: #fe4c40;
+  color: #fff;
+  font-size: 35rpx;
+  border-radius: 0rpx 35rpx 35rpx 0rpx;
+  padding: 10rpx 15rpx 10rpx 30rpx;
+  background: linear-gradient(to  right, #fe8300 , #fe4c40);
+}
+
+.inputColumn{
+  width: 55%;
+  font-size: 35rpx;
+}
+
+.tip{
+    font-size: 35rpx;
+    color: #fe4c40;
+    width: 180rpx;
+
+}
+
+.inputRemark{
+    float: right;
+    font-size: 35rpx;
+    width:100%;
+    padding: 0rpx 15rpx 0rpx 15rpx;
+}
+
+.inputRemark textarea{
+  width:95%;
+
+}
+
+
+.course-check{
+   text-align:center;
+    display:inline-block;
+  margin: 0 auto;
+}
+
+.courseItem{
+  margin:8rpx;
+  /* padding: 15rpx 25rpx 15rpx 25rpx; */
+  background-color: #efefef;
+  float:left;
+  border-radius: 40rpx;
+  display:inline;
+  color: #c6c4c4;
+}
+
+
+.scroll{
+  display:inline;
+}
+
+
+.grey{
+  color:#545454;
+}
+
+
+textarea{
+  width: 80%;
+}
+
+.submitButton{
+    
+    width:80%;
+    height:90rpx;
+    background-color:#fe4c40;
+    border-radius:30px;
+  
+    color:#fff;
+   margin: auto;
+   margin-bottom: 30rpx;
+  display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.mapIcon{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.getAddress{
+   font-size: 35rpx;
+    margin: 15rpx 0rpx 0rpx 50rpx;
+}
+
+.rightArrow{
+  position: absolute;
+  right: 15rpx;
+  width:35rpx;
+  height:35rpx;
+  float:right;
+}

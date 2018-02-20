@@ -1,0 +1,76 @@
+
+ page{
+     height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.background{
+    background-color: #fff;
+}
+
+.howGetTeacher,.howGetStudent,.protectPrivacy,.aboutSalary{
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  padding: 30rpx 0rpx 30rpx 0rpx;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.security{
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  padding: 30rpx 0rpx 30rpx 0rpx;
+  background-color: #fff;
+}
+
+.downArrow{
+  float: right;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.detailHowGetTeacher,.detailHowGetStudent,.detailProtectPrivacy,.detailAboutSalary{
+  color: #757575;
+  font-size: 33rpx;
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 6px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.detailSecurity{
+  color: #757575;
+  font-size: 33rpx;
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  padding-bottom: 150rpx;
+  background-color: #fff;
+}
+
+.bottom{
+  display: flex;
+  z-index: 99;
+  position:fixed;
+  bottom:0;
+  width: 100%;
+  height:100rpx;
+  background: #fff;
+    border-top: 1px solid #d9d9d9;
+}
+
+.feedbackIcon{
+  width: 40rpx;
+  height: 40rpx;
+  border:none;
+}
+
+.feedbackText{
+  vertical-align:middle;
+  color: #fe4c40;
+}
+
+.iconText{
+  display: flex;
+  margin: auto;
+}

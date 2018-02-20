@@ -1,0 +1,26 @@
+<view class="page">
+
+<view wx:if="{{judgeCollect==true}}"  wx:for="{{collect_list}}" class="row" wx:key="" bindtap="showDetail" data-index="{{index}}">
+        <view class="collect-student">
+            <view class="left">
+                <view class="course-circular">
+                      <text>{{item.course}}</text>
+                </view>
+                <view class="name">{{item.name}}</view>
+            </view>
+            <view class="right">
+              <image class="delete" data-index="{{index}}"  catchtap="deleteCollect"   src="../../image/delete.png" />
+                <view class="address">{{item.address[0]}}区 </view>
+                <view>{{item.address[1]}}</view>
+                <view class="salary">{{item.salary}}</view>
+            </view>
+        </view>
+  </view>
+
+  <view class="noCollect" wx:if="{{judgeCollect==false}}" >
+      <view>您还没有收藏家教</view>
+        <view>快去找几个合适的家教吧~</view>
+  </view>
+
+
+</view>

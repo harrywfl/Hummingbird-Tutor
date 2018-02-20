@@ -1,0 +1,63 @@
+<view class="page">
+    <!--头部选择-->
+    <view class="nav">
+        <view class="nav-son {{shownavindex == 1? 'active' : ''}}"  data-nav="1">
+            <view class="content" bindtap="clickQD">青岛站</view>
+        </view>
+        <view class="nav-son {{shownavindex == 2? 'active' : ''}}" bindtap="courseList" data-nav="2">
+            <view class="content">{{choseCourse}}</view>
+            <image  class="icon" src="../../image/downArrow2.png"></image>
+        </view>
+        <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="gradeList" data-nav="3">
+            <view class="content">{{choseGrade}}</view>
+            <image  class="icon" src="../../image/downArrow2.png"></image>
+        </view>
+    </view>
+   
+    <!--课程选择-->
+    <view class="temp temp1 {{courseOpen ? 'slidown' : 'slidup'}} {{courseShow ? 'disappear':''}}">
+        <view data-course="{{item}}" hover-class="navigator-hover" wx:for="{{content}}" bindtap="selectCourse" style="padding-left: 10px">
+            {{item}}
+        </view>
+    </view>
+
+    <!--年级选择-->
+    <view class="temp temp2 {{gradeOpen ? 'slidown' : 'slidup'}} {{gradeShow ? 'disappear':''}}">
+        <view data-grade="{{item}}"    hover-class="navigator-hover"    wx:for="{{content}}"   bindtap="selectgrade" style="padding-left: 10px">
+            {{item}}
+        </view>
+    </view>
+    <!--背景变灰-->
+    <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+
+    <!--学生列表-->
+        <view wx:for="{{student_list}}" class="row" wx:key="" bindtap="showDetail" data-index="{{index}}">
+            <view class="item">
+                    <view class="item-left">
+                        <view class="course-circular {{item.courseEnglish}}">
+                            <text class="chenjian">{{item.course}}</text>
+                        </view>
+                    </view>
+                    <view class="item-right">
+                        <view class="item-right-top">
+                                <text class="student-name">{{item.name}}</text>
+                                <text class="teach-salary">{{item.salary}}</text>
+                        </view>
+                        <view class="item-right-bottom">
+                            <text class="student-position">地点：{{item.addressName}}</text>
+                                <text class="teach-time">频次：{{item.frequency}}</text>
+                        </view>
+                    </view>     
+                </view>
+            </view>
+
+
+       <view class="loading-indicator">
+	              {{loadingTip}}
+          </view>
+        
+    
+
+</view>
+
+

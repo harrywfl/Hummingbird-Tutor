@@ -1,0 +1,94 @@
+<view class="page">
+
+
+<form bindsubmit="registerSuccess" report-submit="true">        
+          <view class="column-photo">
+              <view class="tip-photo">您的照片：</view>
+              <image class="photo"  src="{{photo}}"  bindtap="uploadPhoto"/>
+          </view>
+
+          <view class="column">
+              <view class="tip">您的电话：</view>
+              <view class="inputColumn" >
+                      <input  type="number"   value="{{teacher.telephone}}"   placeholder="用于家长及时和您沟通" name="telephone"  placeholder-style="color:#545454"   />
+              </view>
+          </view>
+
+
+
+    
+
+          <view class="column">
+              <view class="tip">教育经历：</view>
+              <view class="inputColumn">
+                  <picker bindchange="universityChange"  name="university"  value="{{universityIndex}}" range="{{universityArray}}">
+                          <view class="picker"><text class="grey">{{universityArray[universityIndex]}}</text></view>
+                  </picker>
+              </view>
+              <image class="rightArrow" src="../../image/rightArrow.png"></image>
+          </view>
+
+           <view class="column">
+              <view class="tip">您的学历：</view>
+              <view class="inputColumn">
+                  <picker bindchange="degreeChange"  name="degree" value="{{degreeIndex}}" range="{{degreeArray}}">
+                          <view class="picker"><text class="grey">{{degreeArray[degreeIndex]}}</text></view>
+                  </picker>
+              </view>
+              <image class="rightArrow" src="../../image/rightArrow.png"></image>
+
+          </view>
+
+
+          <view class="column">
+              <view class="tip">您的专业：</view>
+              <view class="inputColumn">
+                      <input  placeholder="本科或研究生专业"  value="{{teacher.major}}" name="major" placeholder-style="color:#545454" />
+              </view>
+          </view>
+
+         
+
+          <view class="column" style="border-bottom:20rpx solid #eee; ">
+              <view class="tip">期望薪资：</view>
+              <view class="inputColumn">
+                      <input  placeholder="如“XX元1小时”"   value="{{teacher.salary}}"  name="salary" placeholder-style="color:#545454" />
+              </view>
+          </view>
+
+          <view class="tip-check">请选择您可教学的科目，最多三项</view>
+          <view class="course-check" style="border-bottom:20rpx solid #eee; padding-bottom:20rpx;">
+              <checkbox-group  name="course" bindchange="courseboxChange">
+                  <view class="checkbox" wx:for="{{course}}">
+                      <label class="checkbox" wx:for="{{item}}">
+                        <checkbox color="#fe4c40" value="{{item.name}}" checked="{{item.checked}}"/><text class="grey">{{item.value}}</text>
+                      </label>
+                  </view>
+              </checkbox-group>
+          </view>
+
+             <view class="column" style="position:relative;height:300rpx;border-bottom:20rpx solid #eee;">
+                    <text class="tip" style="position:absolute; top:10rpx;padding-top:30rpx;">其他备注：</text>
+                    <view class="inputRemark" style="position:absolute; top:15rpx;margin-left:250rpx;padding-top:30rpx;">
+                        <textarea  value="{{teacher.self_int}}"   maxlength="500"  name="remark" placeholder="请填写对老师更为详细的要求，以及您孩子的学习情况，和补习时间等"  placeholder-style="color:#545454" />
+                    </view>
+        </view>
+
+
+            <view class="image">请上传相关证书，若无则可不上传</view>
+          <view class="gallery">
+            <view class="item" wx:for="{{urlArr}}" >
+                  <image class="thumb" data-current="{{item}}"  style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx" src="{{item.url}}"  bindtap="previewImage"/>
+                  <image class="delete" src="../../image/deleteImage.png" data-index="{{index}}" bindtap="delete"></image>
+            </view>
+                  <image class="thumb" style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx" src="../../image/upload.png"  bindtap="upImg"/>
+          </view>
+
+
+          <button  class="submitButton"  formType="submit">确定修改</button >
+
+      </form>
+        
+</view>
+
+    

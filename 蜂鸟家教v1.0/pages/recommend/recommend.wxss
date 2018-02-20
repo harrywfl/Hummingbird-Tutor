@@ -1,0 +1,287 @@
+page{
+     height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.hello{
+  display: flex;
+  width: 530rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+.helloIcon{
+  width: 80rpx;
+  height: 80rpx;
+
+}
+
+.helloText{
+  font-size: 45rpx;
+  padding-top: 15rpx;
+  color: #fc8f87;
+}
+
+.warnText{
+  text-align: center;
+  font-size: 25rpx;
+  color: #fc8f87;
+  width: 78%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 1px solid #fc8f87;
+
+}
+
+.rotate{
+  width: 500rpx;
+  height: 500rpx;
+  margin-bottom: 70rpx;
+}
+
+
+.container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+.Nitem {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.Nitem-1 {
+  background-color: #83fd97;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; */
+}
+
+.Nitem-2 {
+  background-color: #ab83fc;
+  top: 0;
+  right: 0;
+  /* animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; */
+}
+
+.Nitem-3 {
+  background-color: #6ab9fd;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  /* animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; */
+}
+
+.Nitem-4 {
+  background-color: #fcd686;
+  bottom: 0;
+  left: 0;
+  /* animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; */
+}
+
+.Yitem {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.Yitem-1 {
+  background-color: #83fd97;
+  top: 0;
+  left: 0;
+  z-index: 1;
+   animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; 
+}
+
+.Yitem-2 {
+  background-color: #ab83fc;
+  top: 0;
+  right: 0;
+   animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; 
+}
+
+.Yitem-3 {
+  background-color: #6ab9fd;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+   animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; 
+}
+
+.Yitem-4 {
+  background-color: #fcd686;
+  bottom: 0;
+  left: 0;
+   animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; 
+}
+
+
+
+@keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 100px)} 
+  50% {transform: translate(100px, 100px)} 
+  75% {transform: translate(100px, 0)} 
+}
+
+@keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-100px, 0)} 
+  50% {transform: translate(-100px, 100px)} 
+  75% {transform: translate(0, 100px)} 
+}
+
+@keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -100px)} 
+  50% {transform: translate(-100px, -100px)} 
+  75% {transform: translate(-100px, 0)} 
+}
+
+@keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(100px, 0)} 
+  50% {transform: translate(100px, -100px)} 
+  75% {transform: translate(0, -100px)} 
+}
+
+
+.matching{
+  position: absolute;
+  padding-top: 25rpx;
+  background-color: #fc8f87;
+  width: 50%;
+  height: 70rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  bottom: 80rpx;
+  color: #fff;
+  font-size: 35rpx;
+  left: 50%;
+  margin-left: -25%;
+}
+
+.resultTeacher{
+  margin-top: 80rpx;
+}
+
+.collect-teacher{
+      box-shadow: 10rpx 10rpx 20rpx #c9c9c9;
+    display: flex;
+    width: 80%;
+    height: 300rpx;
+    background-color: #fe746b;
+    border-radius:30rpx;
+    margin: 0 auto;
+    margin-bottom: 50rpx;
+}
+
+.left{
+  width: 42%;
+  height: 300rpx;
+  text-align:center;
+  border-right: 2px dotted #fff;
+  float: left;
+}
+
+.right{
+  padding-left: 40rpx;
+  width: 53%;
+  float: right;
+  color: #fff;
+}
+
+.teacherPhoto{
+  width: 150rpx;
+  height: 150rpx;
+  border: 2px solid #fff;
+  margin:50rpx 0rpx 10rpx 0rpx;
+}
+
+.left text{
+  display: block;
+  color: #fff;
+}
+
+.teacher-university{
+  padding-top: 80rpx;
+  margin-bottom: 40rpx;
+}
+
+.teach-course text{
+  margin-right: 20rpx;
+}
+
+
+
+
+.collect-student{
+    box-shadow: 10rpx 10rpx 20rpx #c9c9c9;
+    display: flex;
+    width: 80%;
+    height: 300rpx;
+    background-color: #fe746b;
+    border-radius:30rpx;
+    margin: 0 auto;
+    margin-bottom: 50rpx;
+}
+
+.left{
+  width: 42%;
+  height: 300rpx;
+  text-align:center;
+  border-right: 2px dotted #fff;
+  float: left;
+}
+
+.right{
+  padding-left: 40rpx;
+  width: 53%;
+  float: right;
+  color: #fff;
+}
+
+ .course-circular {
+     display: flex;
+     width: 140rpx;
+     height: 140rpx;
+     margin: 0 auto;
+     border-radius:100rpx;
+     background-color: #fff;
+     margin-top: 50rpx;
+
+ }
+
+ .course-circular text{
+   color: #fe4c40;
+   font-size: 42rpx;
+   margin: 45rpx 0 0 32rpx;
+ }
+
+.name{
+  padding-top: 20rpx;
+  color: #fff;
+}
+
+.address{
+  padding-top: 65rpx;
+}
+
+.salary{
+   padding-top: 20px;
+}

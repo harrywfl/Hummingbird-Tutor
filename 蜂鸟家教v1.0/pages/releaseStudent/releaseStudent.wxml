@@ -1,0 +1,84 @@
+<view class="page">
+   
+
+        <!--教学课程、家长、薪资-->
+        <view class="student-sketch">
+          <view class="course-circular  {{student.courseEnglish}}">
+               <text class="chenjian">{{student.course}}</text>
+          </view>
+          <view class="name-salary">
+              <view class="teacher-name">{{student.name}}</view>
+              <view class="teach-salary">{{student.salary}}</view>
+          </view>
+        </view>
+
+        <!--地址、年级、基础-->
+        <view class="student-info">
+    
+
+            <view class="grade">
+                <text class="gray-text">年级 :</text> <text style="padding-left:10rpx;">{{student.grade[0]}}  {{student.grade[1]}}</text>
+            </view>
+
+            <view class="basic">
+                <text class="gray-text">基础 :</text> <text style="padding-left:10rpx;">{{student.basic}}</text>
+            </view>
+        </view>
+
+        <!--对家教要求-->
+        <view class="teacher-requirement">
+            <view class="teach-time">
+                <text class="gray-text">上课次数 :</text> <text style="padding-left:10rpx;">{{student.frequency}}</text>
+            </view>
+
+            <view class="teacher-sex">
+                <text class="gray-text">性别要求 :</text> <text style="padding-left:10rpx;">{{student.sex}}</text>
+            </view>
+
+            <view class="degree">
+                <text class="gray-text">学历 :</text> <text style="padding-left:10rpx;">{{student.trait_limit}}</text>
+            </view>
+        </view>
+
+
+        <view class="address" bindtap="getMap">
+          
+             <view class="addressDetail" style="float:left;position:relative;margin-right:100rpx;">
+                  <view>{{student.addressDetail}}</view>
+             </view>
+              <view class="gray-text" style="float:right;position:absolute;right:5rpx;"> 
+                  <image class="mapIcon" src="../../image/mapText.png"></image>
+              </view> 
+  
+        </view>
+
+        <!--备注-->
+        <view class="remark">
+            <text class="remark-title">自我介绍:</text>
+            <text class="remark-int">{{student.remark}}</text>
+
+        </view>
+
+
+      <view class="bottom">
+          <view class="operation-left" bindtap="deleteRelease">
+                  <view class="operation"> 
+                        <image class="delete-icon"   src="../../image/deleteRelease.png"></image>
+                        <text class="operation-text">删除</text>
+                  </view>
+          </view>
+          <view class="operation-right"  bindtap="modifyRelease">
+                      <view class="operation"> 
+                        <image class="modify-icon"   src="../../image/modify.png"></image>
+                        <text class="operation-text">修改</text>
+                  </view>
+          </view>
+      </view>        
+
+      
+</view>
+
+
+
+
+

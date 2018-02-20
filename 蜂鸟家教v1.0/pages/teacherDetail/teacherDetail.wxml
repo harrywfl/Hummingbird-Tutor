@@ -1,0 +1,132 @@
+<view class="page">
+      
+ 
+        <!--教师照片、名字、课程-->
+            <view class="teacher-sketch">
+              <image class="teacherPhoto" bindtap="preview"src="{{teacher.photo}}" />
+              <view class="name-course">
+                  <view class="teacher-name">{{teacher.teacher_name}}</view>
+                  <view class="teach-course">
+                        <text>教授课程：</text><text class="courseMargin" wx:for="{{teacher.teach_course}}">{{item}}</text>
+                  </view>
+              </view>
+ 
+              <button class="complaint" bindtap="complaint" plain="true"  style="border:0;height:75rpx;">
+                  <image class="complaintIcon" bindtap="complaint"src="../../image/complaint.png" />
+              </button> 
+
+              <!-- <button class="share" open-type="share" data-id="111" plain="true"  style="border:0;height:75rpx;">
+                  <image class="shareIcon" bindtap="share"src="../../image/share.png" />
+              </button>  -->
+            </view>
+
+
+        <view class="aboutData">
+            <image class="timeIcon" src="../../image/time.png"></image>
+            <view class="timeText">{{teacher.modifyTime}}</view>
+
+            <image class="collectIcon" src="../../image/collectNumber.png"></image>
+            <view class="collectText">{{collectNumber}}</view>
+
+            <image class="applyIcon" src="../../image/applyNumber.png"></image>
+            <view class="applyText">{{applyNumber}}</view>
+        </view>
+
+         <view class="course-check" style=" padding-bottom:20rpx;background-color:#fff;width:100%;padding:0rpx 15rpx 20rpx 15rpx;">
+                <view class="courseItem" wx:for="{{traitList}}" style="border: 1rpx solid #737373;color:">
+                  <view style="padding:10rpx;">{{item}}</view>
+                </view>
+          </view>
+
+       
+
+        <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+        <view class="goldUser {{!goldUser?'goldUserOpacity':''}}">
+          <image src="../../image/logoShow.png" class="logo"></image>
+          <text class="openTitle">获得金牌会员</text>
+          <view class="openContent"><view class="detailText">转发至您的<text style="color:#fe4c40">家长群</text>或<text style="color:#fe4c40">班级群</text></view><view class="detailText">即可每日免费申请<text style="color:#fe4c40">6</text>位老师</view><view class="detailText">好的东西 值得分享</view></view>
+           <button class="openButton"  open-type="share" data-id="222" ><text>立即转发</text></button> 
+           <view class="giveUp" bindtap="giveUp">放弃使用</view>
+        </view>  
+
+
+        <!--薪资、教学范围-->
+        <view class="teachRange-salary" style='margin-top:0rpx;'>
+            <view class="salary">
+                <text class="gray-text">期望薪资 :</text> <text style="padding-left:10rpx;">{{teacher.salary}}</text>
+            </view>
+        </view>
+
+        <!--教师简介-->
+        <view class="teacher-info">
+            <view class="teacher-university">
+                <text class="gray-text">教育经历 :</text> <text style="padding-left:10rpx;">{{teacher.university}}</text>
+            </view>
+
+            <view class="teacher-score">
+                <text class="gray-text">高考分数 :</text> <text style="padding-left:10rpx;">{{teacher.teacher_score}}</text>
+            </view>
+
+            <view class="degree">
+                <text class="gray-text">学历 :</text> <text style="padding-left:10rpx;">{{teacher.degree}}</text>
+            </view>
+
+            <view class="major">
+                <text class="gray-text">专业 :</text> <text style="padding-left:10rpx;">{{teacher.major}}</text>
+            </view>
+        </view>
+
+ 
+            <view class="telephone"  bindtap="callPhone"  wx:if="{{showTelephone=='true'}}">
+                <text class="gray-text">联系电话 :</text> <text style="padding-left:10rpx;">{{teacher.telephone}}</text>
+                <image class="telephone-icon"   src="../../image/telephone.png"></image>
+            </view>
+
+
+        <!--自我介绍-->
+        <view class="self-introduction">
+            <text class="self-title">自我介绍:</text>
+            <text class="self-int">{{teacher.self_int}}</text>
+        </view>
+
+        <view class="gallery">
+         <view class="itemImage" wx:for="{{imageArr}}" >
+              <image class="thumb" data-current="{{item}}"  style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx" src="{{item}}" bindtap="previewImage"/>
+          </view>
+        </view>
+
+        <view  class="tip"><text>已经到底啦！快给{{teacher.teacher_name}}发送申请吧</text></view>
+
+
+      <view class="bottom"   wx:if="{{showBottom=='true'}}">
+          <view class="share-left">
+              <button class="share" open-type="share" data-id="111" plain="true"  style="border:0;height:60rpx;">
+                  <image class="shareIcon" bindtap="share"src="../../image/share2.png" />
+              </button>
+              <text class="collect-text" style='color:#fe4c40;'>分享</text>
+          </view>
+          <view class="collect-left" bindtap="collect">
+                  <view class="collect"  wx:if="{{judgeCollect==false}}"> 
+                        <image class="collect-icon"   src="../../image/collect.png"></image>
+                        <text class="collect-text">收藏</text>
+                  </view>
+                  <view class="collect" wx:elif="{{judgeCollect==true}}"> 
+                        <image class="collect-icon"   src="../../image/collect-click.png"></image>
+                        <text class="collect-text">收藏</text>
+                  </view>
+          </view>
+          <view class="talk-right" bindtap="talk">
+              <text>发送申请</text>
+          </view>
+      </view>
+    
+     
+
+
+</view>
+
+
+
+
+
+

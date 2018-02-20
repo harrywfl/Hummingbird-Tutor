@@ -1,0 +1,61 @@
+{
+  "pages": [ 
+    "pages/teacherList/teacherList",
+    "pages/studentList/studentList",
+    "pages/account/account",
+    "pages/studentDetail/studentDetail",
+    "pages/teacherDetail/teacherDetail",
+    "pages/student-register/student-register",
+    "pages/teacher-register/teacher-register",
+    "pages/collectTeacher/collectTeacher",
+    "pages/collectStudent/collectStudent",
+    "pages/releaseTeacher/releaseTeacher",
+    "pages/releaseStudent/releaseStudent",
+    "pages/modifyTeacher/modifyTeacher",
+    "pages/modifyStudent/modifyStudent",
+    "pages/applyStudent/applyStudent",
+    "pages/applyTeacher/applyTeacher",
+    "pages/useHelp/useHelp",
+    "pages/aboutUs/aboutUs",
+    "pages/feedback/feedback",
+    "pages/complaintTeacher/complaintTeacher",
+    "pages/complaintStudent/complaintStudent",
+    "pages/recommend/recommend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fe4c40",
+    "navigationBarTitleText": "蜂鸟家教",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#fe4c40",
+    "color": "#ccc",
+    "list": [
+      {
+        "text": "找老师",
+        "iconPath": "image/teacher.png",
+        "selectedIconPath": "image/teacher-click.png",
+        "pagePath": "pages/teacherList/teacherList"
+      },
+      {
+        "text": "找学生",
+        "iconPath": "image/student.png",
+        "selectedIconPath": "image/student-click.png",
+        "pagePath": "pages/studentList/studentList"
+      },
+      {
+        "text": "智能匹配",
+        "iconPath": "image/recommend.png",
+        "selectedIconPath": "image/recommend-click.png",
+        "pagePath": "pages/recommend/recommend"
+      },
+      {
+        "text": "个人中心",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-click.png",
+        "pagePath": "pages/account/account"
+      }
+    ]
+  }
+}

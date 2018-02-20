@@ -1,0 +1,42 @@
+<view class="page">
+
+
+      <view class="head">
+          <image class="photo"   src="{{userInfo.avatarUrl}}"></image>
+          <view class="name">{{userInfo.nickName}}</view>
+      </view>
+
+
+      <view bindtap="collect" class="collect">
+          <image class="icon" src="../../image/collect-click.png"></image>
+          <text class="text">我的收藏</text>
+      </view>
+
+      <view bindtap="release" class="release">
+          <image class="icon" src="../../image/release.png"></image>
+          <text class="text">我的发布</text>
+      </view>
+
+      <view bindtap="apply"   class="message">
+          <image class="icon" src="../../image/leter.png"></image>
+          <text class="text">我的申请</text>
+          <view class="newApply"  wx:if="{{newApply!=0}}">
+                <view class="newApplyNumber">{{newApply}}</view>
+          </view>
+      </view>
+
+       <view bindtap="useHelp" class="useHelp">
+          <image class="icon" src="../../image/useHelp.png"></image>
+          <text class="text">使用帮助</text>
+      </view>
+
+       <view bindtap="aboutUs" class="aboutUs">
+          <image class="icon" src="../../image/aboutUs.png"></image>
+          <text class="text">关于我们</text>
+      </view>
+
+
+
+
+
+</view>

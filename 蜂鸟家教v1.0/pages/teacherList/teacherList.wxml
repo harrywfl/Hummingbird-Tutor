@@ -1,0 +1,71 @@
+<view class="page">
+    <!--头部选择-->
+    <view class="nav"> 
+        <view class="nav-son {{shownavindex == 1? 'active' : ''}}"  data-nav="1">
+            <view class="content" bindtap="clickQD">青岛站</view>
+        </view>
+        <view class="nav-son {{shownavindex == 2? 'active' : ''}}" bindtap="courseList" data-nav="2">
+            <view class="content">{{choseCourse}}</view>
+            <image  class="icon" src="../../image/downArrow2.png"></image>
+        </view>
+        <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="universityList" data-nav="3">
+            <view class="content">{{choseUniversity}}</view>
+            <image  class="icon" src="../../image/downArrow2.png"></image>
+        </view>
+    </view>
+   
+    <!--课程选择-->
+    <view class="temp temp1 {{courseOpen ? 'slidown' : 'slidup'}} {{courseShow ? 'disappear':''}}">
+        <view data-course="{{item}}" hover-class="navigator-hover" wx:for="{{content}}" bindtap="selectCourse" style="padding-left: 10px">
+            {{item}}
+        </view>
+    </view>
+
+    <!--大学选择-->
+    <view class="temp temp2 {{universityOpen ? 'slidown' : 'slidup'}} {{universityShow ? 'disappear':''}}">
+        <view data-university="{{item}}"    hover-class="navigator-hover"    wx:for="{{content}}"   bindtap="selectUniversity" style="padding-left: 10px">
+            {{item}}
+        </view>
+    </view>
+    <!--背景变灰-->
+    <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+
+    <view class="firstOpen {{!firstOpen?'firstOpenOpacity':''}}">
+       <image src="../../image/logoShow.png" class="logo"></image>
+       <view class="openTitle">蜂鸟家教</view>
+       <view class="openContent"><view class="detailText">家长和教师双向选择</view><view class="detailText">完全不收中介费</view><view class="detailText">信息公开透明</view><view class="detailText">找家教 就来蜂鸟家教</view></view>
+       <view class="openButton" bindtap="openNow"><text>立即体验</text></view>
+    </view>  
+
+    <!--教师列表-->
+    <view wx:for="{{teacher_list}}" class="row" wx:key="" bindtap="showDetail" data-index="{{index}}">
+   
+                  <view class="item">
+                      <view class="item-left">
+                          <image class="teacherPhoto"    src="{{item.photo}}" />
+                      </view>
+                      <view class="item-middle">
+                          <view class="name-trait">
+                              <text class="teacher-name">{{item.teacher_name}}</text>
+                                  <view class="trait  {{item.trait}}">
+                                      <view calss="trait-text">{{item.trait}}</view>
+                                  </view>
+                          </view>
+                          <view class="teacher-university">{{item.university}}</view>
+                          <view class="teacher-score">高考{{item.teacher_score}}分</view>
+                      </view>
+                      
+                      <view class="item-right">
+                          <view class="teach-course">
+                              <text wx:for="{{item.teach_course}}">{{item}}</text>
+                          </view>
+                      </view>  
+                  </view>
+         
+          </view>
+          <view class="loading-indicator">
+	              {{loadingTip}}
+          </view>
+</view>
+
+

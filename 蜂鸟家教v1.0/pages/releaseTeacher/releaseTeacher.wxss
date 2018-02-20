@@ -1,0 +1,182 @@
+
+page{
+     height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #efefef;
+}
+
+
+.teacher-sketch{
+  display: flex;
+  background-color: #fff;
+
+}
+
+.teacherPhoto{
+  margin:30rpx 0rpx 30rpx 30rpx;
+    width: 150rpx;
+    height: 150rpx;
+
+}
+
+.teacher-name{
+    font-size: 42rpx;
+}
+
+.name-course{
+    display: block;
+    margin: 38rpx 0rpx 0rpx 20rpx;
+}
+
+.teachRange-salary,.teacher-info,.self-introduction,.telephone{
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 30rpx 0rpx 30rpx 30rpx;
+}
+
+.aboutData{
+background-color: #fff;
+  padding: 0rpx 0rpx 20rpx 30rpx;
+  font-size: 30rpx;
+  color: #737373;
+  display: flex;
+}
+
+.timeIcon,.collectIcon,.applyIcon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  border:none;
+}
+
+.timeText,.collectText{
+  vertical-align:middle;
+  margin-right: 55rpx;
+}
+
+.applyText{
+  vertical-align:middle;
+}
+
+
+.teach-course{
+  color: #fe4c40;
+  margin-top: 30rpx;
+}
+
+.courseMargin{
+  margin-right: 20rpx;
+}
+
+.salary,.teacher-university,.teacher-score,.degree,.self-title,.telephone{
+margin-bottom: 20rpx;
+
+}
+
+.telephone-icon{
+  height:60rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+}
+
+
+.gray-text{
+  color: #737373;
+}
+
+
+
+
+
+.self-title{
+  display: flex;
+  color:#fe4c40;
+
+}
+
+.self-int{
+  display: flex;
+}
+
+
+.gallery {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.itemImage {
+    position: relative;
+}
+
+.thumb {
+	margin: 10rpx;
+  position: relative;
+}
+
+.bottom{
+  z-index: 99;
+  position:fixed;
+  bottom:0;
+  text-align: center;
+  width: 100%;
+  height:100rpx;
+  background: #fff;
+
+}
+
+.operation-left,.operation-right{
+    width:50%;
+    height:100%;
+    display: flex;
+
+}
+
+.modify-icon{
+  height:50rpx;
+  width: 50rpx;
+  margin:auto;
+}
+
+.delete-icon{
+   height:47rpx;
+   width: 47rpx;
+   margin:auto;
+}
+
+.operation-left{
+  float: left;
+  background-color:#fff;
+}
+
+.operation-right{
+  float: right;
+  background-color:#fff;
+}
+
+.operation{
+  width: 40%;
+  height: 80%;
+}
+
+.operation-right text,.operation,.operation-text{
+  margin: auto;
+  display: flex;
+}
+
+
+.tip{
+  width: 100%;
+  font-size: 30rpx;
+  padding: 20rpx 0rpx 150rpx 0rpx;
+  background:#efefef;
+  text-align: center;
+  color:#fe4c40;
+}

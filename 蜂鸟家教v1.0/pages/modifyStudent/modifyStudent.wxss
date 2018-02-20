@@ -1,0 +1,110 @@
+
+ page{
+   height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #fff;
+    margin-top: 30rpx;
+   
+}
+
+
+
+
+.column{
+  position: relative;
+    align-items:center;
+  display: flex;
+  padding: 30rpx 0rpx 30rpx 0rpx;
+  border-bottom: 1rpx solid #eee;
+
+}
+
+.inputColumn{
+   float: left;
+  font-size: 35rpx;
+ 
+}
+
+.tip{
+    font-size: 35rpx;
+    float: left;
+    margin: 0rpx 50rpx 0rpx 30rpx;
+}
+
+
+
+.remarkBlock{
+  display: block;
+}
+
+.remarkTitle{
+      font-size: 35rpx;
+    float: left;
+    margin: 0rpx 50rpx 0rpx 30rpx;
+}
+
+
+
+.inputRemark{
+    float: right;
+    width: 65%;
+      font-size: 35rpx;
+          margin:0rpx 20rpx 0rpx 220rpx !important;
+
+}
+
+.inputRemark textarea{
+  width:100%;
+}
+
+
+
+.scroll{
+  display:inline;
+}
+
+
+.grey{
+  color:#545454;
+}
+
+
+textarea{
+  width: 80%;
+}
+
+.submitButton{
+    
+    width:80%;
+    height:90rpx;
+    background-color:#fe4c40;
+    border-radius:30px;
+  
+    color:#fff;
+   margin: auto;
+   margin-bottom: 30rpx;
+  display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.mapIcon{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.getAddress{
+   font-size: 35rpx;
+    margin: 15rpx 0rpx 0rpx 50rpx;
+}
+
+.rightArrow{
+  position: absolute;
+  right: 15rpx;
+  width:35rpx;
+  height:35rpx;
+  float:right;
+}
