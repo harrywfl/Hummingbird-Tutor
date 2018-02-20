@@ -4,19 +4,24 @@
 <div align="center">
 <img src="https://www.bmob.cn/uploads/attached/img/20171228/5a449a8b5dd7b.png" height="500" width="270" >
 </div>
+首页面
 
 <div align="center">
 <img src="https://www.bmob.cn/uploads/attached/img/20171228/5a449a91071d0.png" height="500" width="270" >
 </div>
+排名页面
 
 <div align="center">
 <img src="https://www.bmob.cn/uploads/attached/img/20171228/5a449a961534d.png" height="500" width="270" >
 </div>
+答题结果页面
 
 <div align="center">
 <img src="https://www.bmob.cn/uploads/attached/img/20171228/5a449a9a4d734.png" height="500" width="270" >
 </div>
+单项选择页面
 
 <div align="center">
 <img src="https://www.bmob.cn/uploads/attached/img/20171228/5a449a9e53dfc.png" height="500" width="270" >
 </div>
+多项选择页面
